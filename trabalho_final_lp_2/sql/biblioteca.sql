@@ -1,0 +1,42 @@
+CREATE DATABASE IF NOT EXISTS biblioteca;
+
+USE biblioteca;
+
+CREATE TABLE aluno(
+  matricula INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  cpf CHAR(11) NOT NULL,
+  data_nasc DATE NOT NULL,
+  PRIMARY KEY(matricula)
+);
+
+CREATE TABLE area(
+   id INT NOT NULL AUTO_INCREMENT,
+   nome varchar(50) NOT NULL,
+   PRIMARY KEY(id)
+);
+
+CREATE TABLE livro(
+  id INT NOT NULL AUTO_INCREMENT,
+  titulo VARCHAR(50) NOT NULL,
+  status BOOLEAN NOT NULL,
+  autor VARCHAR(50) NOT NULL,
+  id_area INT NOT NULL,
+  PRIMARY KEY(id),
+  FOREIGN KEY(id_area) REFERENCES area(id)
+  ON DELETE RESTRICT ON UPDATE CASCADE
+);
+
+CREATE TABLE reserva (
+ id INT NOT NULL AUTO_INCREMENT,
+ data_retirada DATE NOT NULL,
+ data_entrega DATE NOT NULL,
+ status BOOLEAN NOT NULL,
+ matricula INT NOT NULL, 
+ id_livro INT NOT NULL,
+ PRIMARY KEY(id),
+ FOREIGN KEY (matricula) REFERENCES aluno(matricula) ON DELETE RESTRICT ON UPDATE CASCADE,
+ FOREIGN KEY (id_livro) REFERENCES livro(id)
+ ON DELETE RESTRICT ON UPDATE CASCADE
+);
