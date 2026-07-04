@@ -1,0 +1,461 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color:#333;
+}
+
+.navbar {
+    background-color: rgb(77, 4, 4);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.15);
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container h1{
+    margin: 0;
+    text-align: center;
+    color: rgb(77, 4, 4);
+}
+
+main h1, .container h1{
+    margin-top: 30px;
+}
+
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.logo a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 15px;
+}
+
+.logo img{
+    width: 45px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+.logo h1{
+    color: #ecf0f1;
+    margin: 0;
+    font-size: 25px;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.menu-hamburger{
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* Formulario Cadastro */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 350px;
+}
+
+.form-container .botoes{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.form-container .botoes input,
+.btn-voltar{
+   width: 100%;
+   padding: 12px;
+   border: none;
+   border-radius: 10px;
+   font-size: 16px;
+   font-weight: bold;
+   text-align: center;
+   box-sizing: border-box;
+}
+
+.form-container .botoes input{
+   background-color: rgb(77, 4, 4);
+   color: #ffffff;
+   cursor: pointer;
+}
+
+/* Botão Voltar */
+.btn-voltar{
+   display: inline-block;
+   background-color: rgb(77, 4, 4);
+   color: #ffffff;
+   text-decoration: none;
+   transition: 0.3s;
+}
+
+.btn-voltar:hover{
+    background-color: #5a6268;
+}
+
+form select{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid;
+}
+
+/* Botão Adicionar */
+.botao-adicionar{
+    width: 80%;
+    margin: 20px auto;
+    text-align: right;
+}
+
+.botao-adicionar a{
+    background-color: rgb(77, 4, 4);
+    color: #ffffff;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-adicionar a:hover{
+    background-color: rgb(77, 4, 4);
+}
+
+/* Checkbox */
+.checkbox-livro{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.checkbox-livro input[type="checkbox"]{
+    width: auto;
+    margin: 0;
+}
+
+/* Tabelas */
+table{
+    width: 80%;
+    margin: 30px auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+table th{
+    background-color: rgb(77, 4, 4);
+    color: #ffffff;
+    padding: 12px;
+    text-align: center;
+}
+
+table td{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+    color: #333;
+    font-weight: bold;
+}
+
+table th, table td{
+    border: 1px solid #333;
+}
+
+table a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(77, 4, 4);
+}
+
+
+/* Menu */
+.menu ul{
+    display: flex;
+    list-style: none;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a,li{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 17px;
+    border-radius: 6px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.menu a:hover{
+    color: rgb(77, 4, 4);
+}
+
+main{
+    min-height: 100vh;
+}
+
+.home-container{
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.home-title{
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.menu-grid{
+    
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    
+}
+
+.menu-section{
+    background-color: white;
+    padding: 60px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.menu-section:hover{
+    transform: translateY(-5px);
+}
+
+.menu-section h2{
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(77, 4, 4);
+}
+
+.menu-section ul{
+    list-style: none;
+}   
+
+.menu-section li{
+    margin-bottom: 12px;
+    background-color: rgb(77, 4, 4);
+    border-radius: 5px;
+}
+
+.menu-section a{
+    display: block;
+    color: #ffffff;
+    padding: 12px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.menu-section a:hover{
+    background-color: rgb(77, 4, 4);
+    color: #fff;
+    padding-left: 20px;
+}
+
+/* Botoes Editar/Exluir */
+.acao-editar a, .acao-excluir a{
+    display: inline-block;
+    color: #ffffff;
+    padding: 6px 8px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.acao-editar a{
+    background-color: rgb(77, 4, 4);
+}
+
+.acao-editar a:hover{
+    background-color: rgb(77, 4, 4);
+}
+
+.acao-excluir a{
+    background-color: rgb(77, 4, 4);
+}
+
+.acao-excluir a:hover{
+    background-color: rgb(77, 4, 4);
+}
+
+
+footer{
+    background-color: rgb(77, 4, 4);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+footer p{
+    margin: 5px 0;
+}
+
+/*Pagina de devolução*/
+.devolucao-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.devolucao-container .botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.devolucao-container .botoes .btn-voltar{
+    background-color: rgb(77, 4, 4);
+}
+
+.devolucao-container .botoes input{
+    background-color: rgb(77, 4, 4);
+}
+
+.devolucao-container .botoes input,
+.devolucao-container .botoes .btn-voltar {
+    width: 350px; 
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar .container{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logo h1{
+        font-size: 1.4rem;
+    }
+
+    .menu{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+    }
+
+    .menu.active{
+        max-height: 400px; 
+    }
+
+    .menu ul{
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .menu li{
+        width: 100%;
+    }
+
+    .menu a{
+        display: block;
+        padding: 15px 20px;
+        font-size: 1.1rem;
+    }
+
+    .menu-hamburger{
+        display: block;
+    }
+
+    .menu-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .page-title{
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-title{
+        font-size: 1.8rem;
+    }
+
+    .menu-section h2{
+        font-size: 1.3rem;
+    }
+
+    .logo h1{
+        font-size: 1.4rem;
+    }   
+}
